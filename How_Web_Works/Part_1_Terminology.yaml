@@ -1,0 +1,39 @@
+
+
+1. What is HTTP?
+   HTTP (Hypertext Transfer Protocol) is a protocol used for transmitting data over the internet. It defines how messages are formatted and transmitted between web browsers and servers.
+
+2. What is a URL?
+   A URL (Uniform Resource Locator) is a web address that specifies the location of a resource on the internet. It typically includes the protocol, domain name, and path to a specific page or resource.
+
+3. What is DNS?
+   DNS (Domain Name System) is like a phonebook for the internet. It translates human-readable domain names (e.g., google.com) into IP addresses that computers use to identify each other on the network.
+
+4. What is a query string?
+   A query string is a part of a URL that contains data to be passed to web applications. It comes after the "?" in a URL and consists of key-value pairs separated by "&" (e.g., ?key1=value1&key2=value2).
+
+5. What are two HTTP verbs and how are they different?
+   Two common HTTP verbs are GET and POST:
+   - GET: Used to request data from a server. Parameters are sent in the URL.
+   - POST: Used to submit data to be processed by the server. Data is sent in the request body, not in the URL.
+
+6. What is an HTTP request?
+   An HTTP request is a message sent by a client (usually a web browser) to a server, asking for information or to perform an action. It includes the request method, headers, and sometimes a body.
+
+7. What is an HTTP response?
+   An HTTP response is the server's reply to an HTTP request. It contains the requested information or confirmation of the requested action, along with status codes and headers.
+
+8. What is an HTTP header? Give a couple examples of request and response headers you have seen.
+   HTTP headers are additional pieces of information sent with requests and responses. They provide metadata about the message.
+   Examples:
+   - Request headers: User-Agent, Accept, Cookie
+   - Response headers: Content-Type, Set-Cookie, Cache-Control
+
+9. What are the processes that happen when you type "http://somesite.com/some/page.html" into a browser?
+   1. The browser performs a DNS lookup to find the IP address for somesite.com.
+   2. It establishes a TCP connection with the server at that IP address.
+   3. The browser sends an HTTP GET request for /some/page.html.
+   4. The server processes the request and sends back an HTTP response.
+   5. The browser receives the response and renders the HTML content.
+   6. The browser may make additional requests for resources like images or scripts referenced in the HTML.
+
