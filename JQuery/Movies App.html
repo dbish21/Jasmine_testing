@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movies App</title>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+  <h1 class="text-center mt-5 mb-4">Movies App</h1>
+  <form id="movie-form">
+    <div class="form-group">
+      <label for="title">Movie Title</label>
+      <input type="text" class="form-control" id="title" required minlength="2">
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating</label>
+      <input type="number" class="form-control" id="rating" min="0" max="10" step="0.1" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Movie</button>
+  </form>
+  <div class="mt-4">
+    <button id="sort-title" class="btn btn-secondary">Sort by Title</button>
+    <button id="sort-rating" class="btn btn-secondary">Sort by Rating</button>
+  </div>
+  <ul id="movie-list" class="list-group mt-4"></ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+  $(function() {
+    let movies = [];
+    let titleSortAsc = true;
+    let ratingSortAsc = true;
+
+    $("#movie-form").on("submit", function(e) {
+      e.preventDefault();
+      let title = $("#title").val().trim();
+      let rating = parseFloat($("#rating").val());
+      
+      if (title.length < 2) {
+        alert("Please enter a title with at least 2 characters.");
+        return;
+      }
+      
+      if (rating < 0 || rating > 10 || isNaN(rating)) {
+        alert("Please enter a valid rating between 0 and 10.");
+        return;
+      }
+      
+      movies.push({ title, rating });
+      renderMovies();
+      $("#movie-form")[0].reset();
+    });
+
+    function renderMovies() {
+      $("#movie-list").empty();
+      movies.forEach(function(movie) {
+        let $newMovie = $("<li>").addClass("list-group-item d-flex justify-content-between align-items-center")
+          .text(`${movie.title} - Rating: ${movie.rating.toFixed(1)}`)
+          .append($("<button>").addClass("btn btn-danger btn-sm").text("Remove"));
+        $("#movie-list").append($newMovie);
+      });
+    }
+
+    $("#movie-list").on("click", "button", function() {
+      let index = $(this).parent().index();
+      movies.splice(index, 1);
+      renderMovies();
+    });
+
+    $("#sort-title").on("click", function() {
+      movies.sort((a, b) => {
+        let comparison = a.title.localeCompare(b.title);
+        return titleSortAsc ? comparison : -comparison;
+      });
+      titleSortAsc = !titleSortAsc;
+      renderMovies();
+    });
+
+    $("#sort-rating").on("click", function() {
+      movies.sort((a, b) => {
+        let comparison = a.rating - b.rating;
+        return ratingSortAsc ? comparison : -comparison;
+      });
+      ratingSortAsc = !ratingSortAsc;
+      renderMovies();
+    });
+  });
+</script>
+</body>
+</html>
