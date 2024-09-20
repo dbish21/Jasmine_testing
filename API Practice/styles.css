@@ -1,0 +1,152 @@
+/* Set the overall background color and text color for the entire page */
+body {
+  background-color: #0f0e17;
+  color: #a7a9be;
+  font-family: 'Inter', sans-serif; /* Use Inter font for the entire site */
+}
+
+/* Limit the maximum width of the main container */
+.container {
+  max-width: 1200px;
+}
+
+/* Style the main headings */
+h1, h2 {
+  color: #fffffe; /* White color for better contrast */
+  font-weight: 700; /* Bold font weight */
+  text-align: center;
+  margin-bottom: 1.5rem; /* Add some space below the headings */
+}
+
+/* Style the card that contains each show's information */
+.show-card {
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  border: none;
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Ensure content doesn't spill out of rounded corners */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Add a subtle shadow */
+  background-color: #1f1e28; /* Slightly lighter background for cards */
+}
+
+/* Add a hover effect to the show cards */
+.show-card:hover {
+  transform: translateY(-5px); /* Lift the card slightly on hover */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Increase shadow on hover */
+}
+
+/* Style the show image */
+.show-img {
+  height: 300px;
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Style the body of the card */
+.card-body {
+  background-color: #1f1e28;
+  padding: 1.5rem;
+}
+
+/* Style the title of each show */
+.card-title {
+  font-weight: 600;
+  color: #ff8906; /* Orange color for the title */
+  margin-bottom: 0.75rem;
+}
+
+/* Style the summary text for each show */
+.show-summary {
+  font-size: 0.9rem;
+  color: #a7a9be;
+  max-height: 100px; /* Limit the height of the summary */
+  overflow: hidden; /* Hide any text that exceeds the max height */
+  margin-bottom: 1rem;
+}
+
+/* Style the "View Episodes" button */
+.btn-outline-primary {
+  border-color: #ff8906;
+  color: #ff8906;
+  transition: all 0.3s ease;
+}
+
+/* Style the "View Episodes" button on hover */
+.btn-outline-primary:hover {
+  background-color: #ff8906;
+  color: #0f0e17; /* Dark text on light background for contrast */
+}
+
+/* Style the episodes area */
+#episodesArea {
+  background-color: #1f1e28;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin-top: 2rem;
+}
+
+/* Style each episode item in the list */
+.episode-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.2s ease;
+  background-color: #2e2d3a; /* Slightly lighter background for episodes */
+  border: none;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+/* Add a hover effect to episode items */
+.episode-item:hover {
+  background-color: #3e3d4a; /* Lighten the background on hover */
+}
+
+/* Style the episode number */
+.episode-number {
+  font-weight: 600;
+  color: #ff8906; /* Orange color for episode numbers */
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Style the episode name */
+.episode-name {
+  color: #fffffe; /* White text for better readability */
+}
+
+/* Add some space below the search form */
+#searchForm {
+  margin-bottom: 2rem;
+}
+
+/* Style the search input field */
+.form-control {
+  background-color: #2e2d3a;
+  border-color: #3e3d4a;
+  color: #fffffe;
+  border-radius: 8px;
+}
+
+/* Style the search input field when focused */
+.form-control:focus {
+  background-color: #2e2d3a;
+  border-color: #ff8906; /* Orange border when focused */
+  color: #fffffe;
+  box-shadow: 0 0 0 0.2rem rgba(255, 137, 6, 0.25); /* Add a glow effect */
+}
+
+/* Style the search button */
+.btn-primary {
+  background-color: #ff8906;
+  border-color: #ff8906;
+  color: #0f0e17;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Style the search button on hover */
+.btn-primary:hover {
+  background-color: #e67e00; /* Darken the orange slightly on hover */
+  border-color: #e67e00;
+  color: #0f0e17;
+}
