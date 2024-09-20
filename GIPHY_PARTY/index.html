@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giphy Party!</title>
+  <link rel="stylesheet"
+        href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+    }
+    .container {
+      max-width: 800px;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .form-control, .btn {
+      border-radius: 20px;
+    }
+    #gif-area {
+      margin-top: 2rem;
+    }
+    #gif-area img {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    #gif-area img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <h1 class="text-center mt-5 mb-4">GIPHY PARTY</h1>
+  <form class="form-inline d-flex justify-content-center mb-4">
+    <input type="text" id="search" name="search"
+           placeholder="Enter a search term" class="form-control mr-2 flex-grow-1"/>
+    <input type="submit" class="btn btn-primary" value="Search Giphy!"/>
+    <button id="remove" class="btn btn-danger ml-2">Remove Images</button>
+  </form>
+  <div id="gif-area" class="row">
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>
