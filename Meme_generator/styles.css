@@ -1,0 +1,199 @@
+/* Set the overall page style */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Use Roboto font with fallbacks */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure full viewport height */
+    margin: 0; /* Remove default margin */
+    background-color: #1a2b3c; /* Dark blue background */
+    color: #e0e0e0; /* Light gray text for better contrast */
+}
+
+/* Style the main container */
+.container {
+    background-color: #3a3a3a; /* Gray background for the meme generator box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    padding: 2rem; /* Inner spacing */
+    max-width: 500px; /* Limit maximum width */
+    width: 100%; /* Full width up to max-width */
+}
+
+/* Style the main heading */
+h1 {
+    color: #ffffff; /* White color for the heading */
+    margin-bottom: 1.5rem; /* Space below the heading */
+}
+
+/* Style the meme container */
+#meme-container {
+    position: relative; /* For positioning child elements */
+    display: inline-block; /* Wrap content */
+    margin-top: 1rem; /* Space above the meme */
+    max-width: 100%; /* Ensure it doesn't overflow the container */
+}
+
+/* Style the meme image */
+#meme-image {
+    max-width: 100%; /* Responsive image size */
+    max-height: 60vh; /* Limit height to 60% of viewport height */
+    border-radius: 4px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Common styles for meme text */
+.meme-text {
+    position: absolute; /* Position over the image */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for true centering */
+    color: white; /* White text */
+    font-size: 24px; /* Large font size */
+    font-weight: bold; /* Bold text */
+    text-shadow: 2px 2px 4px #000000; /* Text shadow for readability */
+    width: 90%; /* Width of text area */
+    text-align: center; /* Center-align text */
+}
+
+/* Position top text */
+#top-text {
+    top: 10px; /* 10px from the top */
+}
+
+/* Position bottom text */
+#bottom-text {
+    bottom: 10px; /* 10px from the bottom */
+}
+
+/* Hide the default file input */
+input[type="file"] {
+    display: none;
+}
+
+/* Style the custom file upload button */
+.file-upload-label {
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer; /* Show pointer on hover */
+    background-color: #3498db; /* Blue background */
+    color: white; /* White text */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Darken the upload button on hover */
+.file-upload-label:hover {
+    background-color: #2980b9;
+}
+
+/* Style text inputs and buttons */
+input[type="text"], button {
+    width: calc(100% - 20px); /* Full width minus padding */
+    margin: 10px 0; /* Vertical margin */
+    padding: 8px; /* Inner padding */
+    border: 1px solid #555; /* Darker border for contrast */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    background-color: #2c2c2c; /* Darker input background */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Additional styles for buttons */
+button {
+    background-color: #2ecc71; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    cursor: pointer; /* Show pointer on hover */
+    transition: background-color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Darken button on hover */
+button:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem; /* Reduce padding on small screens */
+    }
+}
+
+/* Add this to your existing CSS or replace the relevant parts */
+
+#memes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.meme-item {
+    position: relative;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.meme-content {
+    position: relative;
+}
+
+.generated-meme {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.remove-meme {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 16px;  /* Reduced from 20px */
+    height: 16px; /* Reduced from 20px */
+    font-size: 12px; /* Reduced from 16px */
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: background-color 0.3s;
+}
+
+.remove-meme:hover {
+    background-color: rgba(255, 0, 0, 0.9);
+}
+
+/* Add this to your existing CSS */
+
+.image-preview {
+    display: none;
+    max-width: 100%;
+    max-height: 200px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Add this to your existing CSS */
+
+.share-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.share-link:hover {
+    color: #2980b9;
+}

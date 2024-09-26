@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Meme Generator</title> 
+    <!-- Links to Google Fonts to use Roboto font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body> 
+    <div class="container"> <!-- Main container for the meme generator -->
+        <h1>Meme Generator</h1> <!-- Main heading -->
+        <div class="meme-form">
+            <!-- Label for file input, styled as a button -->
+            <label for="image-upload" class="file-upload-label">Choose an Image</label>
+            <!-- File input for uploading images, hidden and triggered by the label above -->
+            <input type="file" id="image-upload" accept="image/*">
+            <!-- Preview image element -->
+            <img id="image-preview" src="" alt="Image Preview" class="image-preview">
+            <!-- Text input for the top text of the meme -->
+            <input type="text" id="top-text-input" placeholder="Top text">
+            <!-- Text input for the bottom text of the meme -->
+            <input type="text" id="bottom-text-input" placeholder="Bottom text">
+            <!-- Button to generate the meme -->
+            <button id="generate-meme">Generate Meme</button>
+        </div>
+        <!-- Container for the generated memes -->
+        <div id="memes-container">
+            <!-- Generated memes will be added here -->
+        </div>
+    </div>
+
+    <!-- Links to the external JavaScript file -->
+    <script src="index.js"></script>
+</body>
+</html>
